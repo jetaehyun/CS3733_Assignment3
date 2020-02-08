@@ -42,8 +42,8 @@ public class SalesManager extends Employee {
     }
     return "Sales Manager: "
         + this.employeeName
-        + " "
-        + Long.toString(this.salesID)
+//        + " "
+//        + Long.toString(this.salesID)
         + ". Employees: "
         + names
         + ". Clients: "

@@ -36,9 +36,9 @@ public class SalesAssociate extends Employee {
         String names = this.getManager().employeeName + " " + Long.toString(this.getManager().salesID);
         return "Sales Associate: "
                 + this.employeeName
-                + " "
-                + Long.toString(this.salesID)
-                + ". Employees: "
+//                + " "
+//                + Long.toString(this.salesID)
+                + ". Sales Manager: "
                 + names
                 + ". Clients: "
                 + listOfClients
