@@ -20,19 +20,19 @@ public class Client {
         return "Client: " + this.clientName + ". Sales Employee: " + employee.getEmployeeName() + " " + employee.getSalesID();
     }
 
-    public int getClientID() {
+    protected int getClientID() {
         return this.clientID;
     }
 
-    public String getClientName() {
+    protected String getClientName() {
         return this.clientName;
     }
 
-    public void setClientID(int clientID) {
+    protected void setClientID(int clientID) {
         this.clientID = clientID;
     }
 
-    public void setClientName(String clientName) {
+    protected void setClientName(String clientName) {
         this.clientName = clientName;
     }
 

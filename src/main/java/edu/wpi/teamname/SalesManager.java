@@ -1,20 +1,19 @@
 package edu.wpi.teamname;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class SalesManager extends Employee {
 
-  //    protected String employeeName;
-  //    protected ArrayList<Employee> employees = new ArrayList<Employee>();
   protected ArrayList<Employee> employees;
-
-  //    protected SalesManager manager;
-  //    protected long salesID;
 
   public SalesManager(String employeeName, long salesID, ArrayList<Employee> employees) {
     super(employeeName, salesID);
     this.employees = employees;
   }
+
+  public SalesManager(){}
+
 
   double bonus() {
     int countEmployee = this.employees.size();
@@ -50,4 +49,6 @@ public class SalesManager extends Employee {
         + listOfClients
         + ". Bonus: " + Integer.toString((int) bonus());
   }
+  protected ArrayList<Employee> getEmployees(){ return this.employees;}
+  protected void setEmployees(ArrayList<Employee> employees){this.employees = employees;}
 }

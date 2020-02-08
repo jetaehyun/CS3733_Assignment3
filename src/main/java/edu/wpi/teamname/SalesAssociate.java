@@ -4,13 +4,8 @@ import java.util.ArrayList;
 
 public class SalesAssociate extends Employee {
 
-//    protected String employeeName;
-    protected SalesManager manager;
-//    protected long salesID;
-
     public SalesAssociate(String employeeName, SalesManager manager, long salesID) {
-        super(employeeName, salesID);
-        this.manager = manager;
+        super(employeeName, salesID, manager);
     }
 
     double bonus() {
