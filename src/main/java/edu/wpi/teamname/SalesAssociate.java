@@ -1,5 +1,7 @@
 package edu.wpi.teamname;
 
+import java.util.ArrayList;
+
 public class SalesAssociate extends Employee {
 
 //    protected String employeeName;
@@ -20,7 +22,27 @@ public class SalesAssociate extends Employee {
     }
 
     public String toString() {
-        return "Hello";
+        StringBuffer list = new StringBuffer();
+        ArrayList<Client> clients = getClients();
+        for(int i = 0; i < clients.size(); i++) {
+            if(i == clients.size() - 1) {
+                list.append(clients.get(i).getClientName() + " " + Long.toString(clients.get(i).getClientID()));
+                break;
+            }
+            list.append(clients.get(i).getClientName() + " " + Long.toString(clients.get(i).getClientID()) +  ", ");
+        }
+        String listOfClients = list.toString();
+
+        String names = this.getManager().employeeName + " " + Long.toString(this.getManager().salesID);
+        return "Sales Associate: "
+                + this.employeeName
+                + " "
+                + Long.toString(this.salesID)
+                + ". Employees: "
+                + names
+                + ". Clients: "
+                + listOfClients
+                + ". Bonus: " + Integer.toString((int) bonus());
     }
 
 }

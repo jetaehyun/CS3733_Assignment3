@@ -29,10 +29,10 @@ public class SalesManager extends Employee {
     ArrayList<Client> clients = getClients();
     for(int i = 0; i < clients.size(); i++) {
       if(i == clients.size() - 1) {
-        list.append(clients.get(i).getClientName());
+        list.append(clients.get(i).getClientName() + " " + Long.toString(clients.get(i).getClientID()));
         break;
       }
-      list.append(clients.get(i).getClientName() + ", ");
+      list.append(clients.get(i).getClientName() + " " + Long.toString(clients.get(i).getClientID()) +  ", ");
     }
     String listOfClients = list.toString();
 
@@ -40,12 +40,14 @@ public class SalesManager extends Employee {
     for(Employee e : employees) {
       names += e.getEmployeeName() + " "  + Long.toString(e.salesID);
     }
-    return "Sales Manager:"
+    return "Sales Manager: "
         + this.employeeName
-        + ".Employees:"
+        + " "
+        + Long.toString(this.salesID)
+        + ". Employees: "
         + names
-        + ".Clients:"
+        + ". Clients: "
         + listOfClients
-        + ".Bonus:" + Integer.toString((int) bonus());
+        + ". Bonus: " + Integer.toString((int) bonus());
   }
 }

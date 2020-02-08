@@ -17,7 +17,7 @@ public class Client {
     }
 
     public String toString() {
-        return "Client:" + this.clientName + ".Sales Employee:" + employee.getEmployeeName() + " " + employee.getSalesID();
+        return "Client: " + this.clientName + ". Sales Employee: " + employee.getEmployeeName() + " " + employee.getSalesID();
     }
 
     public int getClientID() {

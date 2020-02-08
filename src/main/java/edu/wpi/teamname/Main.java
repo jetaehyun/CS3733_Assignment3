@@ -27,9 +27,15 @@ public class Main {
     tom.addClient(David);
     Jane.addClient(Sarah);
     Jane.addClient(John);
+    Harry.addClient(Ann);
+    Nancy.addClient(Daniel);
+    Nancy.addClient(Susan);
 
     System.out.println(Jane.toString());
     System.out.println(tom.toString());
+
+    System.out.println(Harry.toString());
+    System.out.println(Nancy.toString());
 
 //    System.out.println();
 //    System.out.println();
